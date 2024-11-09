@@ -1,0 +1,69 @@
+.top-right {
+    position: absolute;
+    top: -50px;    /* Adjust as needed */
+    right: -100px;  /* Adjust as needed */
+    max-width: 100px; /* Control image size */
+  }
+  h1 {
+    font-size: 2em !important; /* Adjust as needed */
+  }
+
+#buzzwords {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: visible; /* Allow elements to overflow */
+}
+.buzzword {
+  position: absolute;
+  opacity: 0; /* Hidden initially */
+  font-size: 2em;
+  color: #a72312;
+  font-weight: bold;
+  transition: opacity 0.5s ease-in-out; /* Smooth appearance */
+  white-space: nowrap; /* Prevent line breaking */
+}
+.buzzword.visible {
+  opacity: 1; /* Set to visible */
+}
+
+.centered-text {
+  position: fixed; /* Position fixed to keep it on screen */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center */
+  z-index: 100; /* Ensure it's on top of other content */
+  font-size: 3em; /* Adjust font size as needed */
+  color: white; /* Text color */
+  background-color: rgba(0, 0, 0, 0.966); /* Semi-transparent background */
+  padding: 100px; /* Padding for readability */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center;
+}
+
+/* Ensure columns and container allow overflow */
+.reveal .columns {
+  display: flex;
+  overflow: visible; /* Allow overflow in the container */
+  gap: 1rem;
+}
+
+.reveal .column {
+  width: 50%;
+  overflow: visible; /* Allow overflow for individual columns */
+}
+
+.reveal .slide-logo {
+  height: 75px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+.absolute-columns {
+  display: flex;
+  position: absolute;
+  top: calc(100vh - 100px); /* Adjust based on footer height */
+  left: 0;
+  padding: 0; /* Remove padding from columns container */
+  margin: 0; /* Remove any margins */
+  overflow: visible;
+}

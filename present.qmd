@@ -1,0 +1,555 @@
+---
+title: "Does AI Hear What We Hear?"
+subtitle: "Testing Music Technology’s Human Touch"
+author: "Konrad Swierczek"
+format:
+    revealjs:
+        logo: img/maple.png
+css: styles.css
+title-slide-attributes: 
+  data-notes: Thrilled, Thank G & G, speakers. Excited story PhD, make sure it right!
+---
+
+## Overview
+::: {.incremental}
+- Introduction
+- Part 1: Three Case Studies
+    - Consonance & Dissonance
+    - Concert Studies
+    - Emotion in Music
+- Part 2: Lessons Learned
+- Part 3: How Do We Move Forward?
+:::
+
+::: {.notes}
+- FIRST - three case studies - AI listening != human listening.
+- NEXT - what's going on? What's going wrong?
+- FINALLY - MAPLE Tools, Data driven approach to **understand + improve**
+:::
+
+## Why Music, Technology, & The Mind?
+
+::: columns
+
+:::{.column width="33%"}
+::: {.fragment .fade-in}
+![](img/konrad1.jpeg)
+<div style="font-size: 0.5em;">
+- Performance
+- Composition & Music Theory
+- Music Community
+</div>
+:::
+:::
+
+:::{.column width="33%"}
+::: {.fragment .fade-in}
+![](img/konrad2.jpeg)
+<div style="font-size: 0.5em;">
+- Audio Engineering
+- Open Source Technology
+- Computation & Music
+</div>
+:::
+:::
+
+:::{.column width="33%"}
+::: {.fragment .fade-in}
+![](img/konrad3.jpg)
+<div style="font-size: 0.5em;">
+- Music Perception & Cognition
+- Open Science
+- Science Communication
+</div>
+:::
+:::
+
+:::
+
+::: {.notes}
+Why am I doing this work?
+
+- FIRST HAT - MUSICIAN - I perform electric and double bass in all sorts of contexts from jazz, to classical, to country and pop music. I also compose and have an extensive background, and am involved in a number of community music projects 
+- SECOND HAT - TECHNOLOGIST - I've been working as a professional audio engineer for my entire adult life, I am a huge fan of open source technology, and more broadly how we can implement technology to improve music practice and participation.
+- THIRD HAT - RESEARCHER - throughout my post secodnary education I've been interested in understanding how the mind shapes our experience of music. Working in this dicsipline has also given me a passion for both Open science, and science communication
+
+- How do I think about these issues? Centering the musician and listener, technology and science: powerful tools to understand and enhance music. That said, I am pretty strongly convinced that all tools for creating music should be centered around human first: we'll talk a little more about that in part 2. And this attitude and background shapes my thinking on how we should develop, test, and use new tools for music. 
+:::
+
+
+## What Are We Talking About?
+
+::: {.fragment .fade-in}
+<div id="buzzwords">
+  <span class="buzzword" style="top: 0%; left: -20%;">Artificial Intelligence</span>
+  <span class="buzzword" style="top: 15%; left: 30%;">Machine Learning</span>
+  <span class="buzzword" style="top: 2.5%; left: 65%;">Deep Learning</span>
+  <span class="buzzword" style="top: 27.5%; left: 0%;">Neural Network</span>
+  <span class="buzzword" style="top: 37.5%; left: 57.5%;">Data Science</span>
+  <span class="buzzword" style="top: 65%; left: -20%;">Unsupervised Learning</span>
+  <span class="buzzword" style="top: 50%; left: -15%;">Natural Language Processing</span>
+  <span class="buzzword" style="top: 65%; left: 65%;">Generative AI</span>
+  <span class="buzzword" style="top: 80%; left: 10%;">Reinforcement Learning</span>
+</div>
+:::
+
+::: {.fragment .fade-in}
+<div class="centered-text">It's All About Prediction!</div>
+:::
+
+::: {.notes}
+- AI Terms
+It seems like everyday we have a new term or concept or tool to digest, and it can sometimes feel a bit overwhelming.
+More to the point, it can become really confusing to either have different terms for similar things, or even worse the same term for things that are in fact very different from each other.
+In this sea of jargon and terms, I find it helpful to stay grounded to what I think is in common between all these things:
+It's all about prediction. 
+All these exciting tools take some input, whether its text or music or speech, or a dozen other things, and returns an output which is meant to predict the desired result.
+I know this is starting to change with how we think about generative models, but I think at their core, they still are predictive models more than anything else.
+:::
+
+## AI & Music???
+
+
+:::{.fragment}
+Music Content Analysis
+:::
+
+:::{.fragment}
+"Extracting meaningful aspects of music from audio files."
+:::
+
+::: columns
+
+:::{.fragment .column width="25%"}
+![](img/classify.png){height="200"}
+:::
+
+:::{.fragment .column width="25%"}
+![](img/reccommend.png){height="200"}
+:::
+
+:::{.fragment .column width="25%"}
+![](img/generate.png){height="200"}
+:::
+
+:::{.fragment .column width="25%"}
+![](img/analyze.png){height="200"}
+:::
+
+:::
+
+:::{.notes}
+:::
+
+# PART 1: THREE CASE STUDIES
+![](img/part1.svg){width="250"}
+
+::: {.notes}
+With all that out of the way, let's jump right into some case studies.
+These are three research projects I've been invovled in during my time at MIMM. All of these are examples of scientific studies conducted to help us better understand how music is experienced. And in all these cases, using predictive models of music were both conveinent and opened up analysis opportunities we wouldn't be able to do by hand. However, with all these questions, the predictive models themsevles present challenges, both technical and theoretical to be solved. 
+:::
+
+## Consonance & Dissonance
+<div class="top-right">
+  ![](img/part1.svg){width="100"}
+</div>
+
+:::{.r-stack}
+![](img/key.png){.fragment .fade-in .absolute left="5%" width="500"}
+
+:::
+
+::: {.notes}
+so first up is work i did early in my PhD in the Digital Music lab with Matthew Woolhouse.
+Matthew was interested in developing predictive models for understanding tonality, or the structure of pitch in music. You can think of this as what key a piece of music is in: is it in A Major, or C minor, and so on. And during his doctoral work, he found that Consonance and Dissonance is a key component of tonality is percieved. And to introduce the concept of consonance and dissonace, I'm going to hand it off to Konrad from the past, with this video we prepared for Science Rendevous, an organization dedicated to bringing exciting research and STEM experiences and programming to the public.
+:::
+
+::: footer
+Woolhouse (2009), *Journal of New Music Research*
+:::
+
+## Consonance & Dissonance
+<div class="top-right">
+  ![](img/part1.svg){width="100"}
+</div>
+
+{{< video img/dissonance.mp4 >}}
+
+::: {.notes}
+so first up is work i did early in my PhD in the Digital Music lab with Matthew Woolhouse.
+Matthew was interested in developing predictive models for understanding tonality, or the structure of pitch in music. You can think of this as what key a piece of music is in: is it in A Major, or C minor, and so on. And during his doctoral work, he found that Consonance and Dissonance is a key component of tonality is percieved. And to introduce the concept of consonance and dissonace, I'm going to hand it off to Konrad from the past, with this video we prepared for Science Rendevous, an organization dedicated to bringing exciting research and STEM experiences and programming to the public.
+:::
+
+::: footer
+Woolhouse (2009), *Journal of New Music Research*
+:::
+
+## Consonance & Dissonance
+<div class="top-right">
+  ![](img/part1.svg){width="100"}
+</div>
+
+::: columns
+
+:::{.column .r-stack width="50%"}
+![](img/harrison_1.png){.fragment}
+
+![](img/harrison_2.png){.fragment}
+
+![](img/harrison_3.png){.fragment}
+
+![](img/harrison.png){.fragment}
+:::
+
+::: {.column width="50%"}
+![](img/cd.png){.fragment}
+
+![](img/eerola.png){.fragment}
+:::
+
+:::
+
+::: footer
+Harrison & Pearce (2020), *Psychological Review*
+:::
+
+::: {.notes}
+Now it turned out that as I was getting familiarized with all these models, a great mega study looking at various models of dissonance was published. 
+And in this study, Harrison and Pearce proposed a new cultural predictive model of dissonance that used scores, and seemed to be quite accurate when compared to human ratings of consonance and dissonance.
+But one thing that stood out to me was that when they looked at audio based models, performance tanked.
+Even more interesting, a model developed by auditory researchers in the late 1970s seemed to outperform all the other models. 
+Overall, it seemed like a simple model of roughness showing how sounds itneract in the inner ear seemed to outperform more complex models that accounted for more data and more facets of perception. as a side note, you'll notice the lack of a cultural (coloured in yellow ) model for audio files, which itself is interesting.
+I used a variety of machine learning: only marginal improvement.
+No new machine learning contributions, but significant cognitive work.
+Overall: simple models, theoretical and perceptual understanding of music appears to be the best way of improving these models.
+:::
+
+## Concert Studies
+<div class="top-right">
+  ![](img/part1.svg){width="100"}
+</div>
+
+::: {.fragment .fade-in-then-out .absolute}
+![](img/livelab2.png)
+:::
+
+::: columns
+
+:::{.column .fragment}
+![](img/livelab.png)
+
+![](img/nezqwik.png)
+:::
+
+:::{.column .fragment}
+![](img/cannabis_results.png)
+:::
+
+:::
+
+::: footer
+Wood et al. (2024), *The biennial meeting of the Society for Music Perception and Cognition*
+:::
+
+<div class="notes">
+  Speaker notes go here.
+
+  <audio controls>
+    <source src="etc/audio/rehearsal1_clip 5_LR.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio controls>
+    <source src="etc/audio/rehearsal2_clip 5_LR.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio controls>
+    <source src="etc/audio/beeps_bad.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+  <audio controls>
+    <source src="etc/audio/beeps_good.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+</div>
+
+## Emotion in Music 
+<div class="top-right">
+  ![](img/part1.svg){width="100"}
+</div>
+
+::: {.r-stack}
+![](img/mode.png){.fragment width="500"}
+
+![](img/mode_1.png){.fragment}
+
+![](img/mode_2.png){.fragment}
+
+![](img/mode_3.png){.fragment}
+
+![](img/mode_4.png){.fragment}
+:::
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+::: footer
+Anderson & Schutz (2022), *Psychology of Music*; Swierczek & Schutz (2024), *in press*
+:::
+
+
+# PART 2: LESSONS LEARNED
+![](img/part2.png){width="250"}
+
+::: {.notes}
+So, now that I've given you a sense of the kinds of tasks we get up to in my neck of the woods, and some of the challenges, I want to spend some time talking about some theoretical frameworks for thinking about these issues.
+:::
+
+## Chasing Wild Horses
+<div class="top-right">
+  ![](img/part2.png){width="100"}
+</div>
+
+::: columns
+
+::: {.column .fragment}
+![](img/hans.png){}
+
+<p style="font-size: 0.5em;">Clever Hans with his trainer, Wilhelm von Osten, 1904.</p>
+:::
+
+::: {.column .fragment width="30%"}
+![](img/sturm.jpg){}
+
+<p style="font-size: 0.5em;">“we propose to determine whether a MIR system is actually a 'horse:' a system appearing capable of a remarkable human feat, e.g., music genre recognition, but actually working by using irrelevant characteristics (confounds).”</p>
+:::
+
+:::
+
+::: footer
+Sturm (2017), *Computers in Entertainment*; Sturm (2014), *IEEE Trans. Multimedia*
+:::
+
+::: {.notes}
+- So the first of these theoretical frameworks is what I call the horse problem. And I'm sure some of you at this point thing I've lost my mind, but the so-called "horse" inside of music information retreival has become a big topic of discssion in the community, and a huge inspiration for the work we've been doing at the maple lab.
+- So the horse we're talking about here is actual a story from the start of the 20th century in Germany: clever hans who appeared to be able to do math. His trainer would ask him simple math questions, and he would tap the correct answer with his foot. A psychologist, Pfungst, did a series of tests to see if he was able to answer these questions under more controlled conditions and found he was not. Basically, his trainer was actually giving visual cues inadvertently that helped Hans reach the correct answer. 
+
+The idea here is the horse is able to get to the right answer, but not for the right reasons. If the horse knows how to do Math from spoken word commands, it shouln’t need visual cues to complete the task. 
+
+- More recently, a promiment researcher in the music analysis field has proposed that in many cases, predictive models of music may avtully be "horses": that is they are relying on extraneous information to make predictions. For instance, a genre recognition system may not be "lsitening" for genre, but rather relying on other factor.
+ Now i happen to think this framework creates a great opportunity to test any prediction model. we can apply this to music: if humans are able to identify the key or tempo of a piece of music regardless of what instrument it’s performed on, using music recorded on different instruments shouldn’t change the prediction of a computer.
+
+ And to call back to our case studies, mode predictions being confounded by performance and beat tracking being inconsistent or unrealiable are great examples of horse like behaviour in practice.
+:::
+
+## The Tip of the Iceberg
+<div class="top-right">
+  ![](img/part2.png){width="100"}
+</div>
+
+:::columns
+
+:::{.column .r-stack width="30%"}
+![](img/iceberg_1.jpg){.fragment height="500"}
+
+![](img/iceberg_2.jpg){.fragment height="500"}
+
+![](img/iceberg_3.jpg){.fragment height="500"}
+:::
+
+:::{.column .incremental width="70%"}
+- Music is defined by humans!
+- Do acoustic features directly represent music features?
+- Measuring human sensation/perception/cognition of music is hard!
+- "...only cognitive models are likely to succeed in processing Music in a human-like way."
+:::
+
+:::
+
+::: footer
+Wiggins (2009), *11th IEEE International Symposium on Multimedia*
+:::
+
+## Perspectives
+<div class="top-right">
+  ![](img/part2.png){width="100"}
+</div>
+
+:::{.fragment}
+“Any conclusion from this experiment that is more general than ‘the model has learned something about this dataset’ lacks validity. One must resist the urge to conclude that a model must be doing whatever is hoped for.
+:::
+
+:::{.incremental}
+- Who does the model represent?
+- What assumptions does the model make?
+- Is the data a good representation of the phenomenon it's predicting?
+- How often should the model be updated?
+:::
+
+::: footer
+Sturm & Flexer (2023), *preprint*
+:::
+
+# PART 3: HOW TO GET AI TO CARNEGIE HALL?
+![](img/part3.png){width="250"}
+
+::: {.notes}
+Now that you have a sense of the theory behind some of these issues, I'm going to spend the rest of the talk getting into some of the ways we at the maple lab are putting these theories into practice with evaluation or testing techniques
+:::
+
+## Investigating Variation
+<div class="top-right">
+  ![](img/part3.png){width="100"}
+</div>
+
+:::{.r-stack}
+![](img/mode_4.png){.fragment .fade-in-then-out}
+
+![](img/versions_1.png){.fragment width="100%"}
+
+![](img/versions_2.png){.fragment width="100%"}
+
+![](img/versions_3.png){.fragment width="100%"}
+
+![](img/versions_4.png){.fragment width="100%"}
+
+![](img/versions_5.png){.fragment width="100%"}
+
+![](img/versions_6.png){.fragment width="100%"}
+
+![](img/vsum_1.png){.fragment width="100%"}
+
+![](img/vsum_2.png){.fragment width="100%"}
+
+![](img/vsum_3.png){.fragment width="100%"}
+:::
+
+::: footer
+Swierczek & Schutz (2024), *in review*
+:::
+
+::: {.notes}
+The first of these is a direct follow up to the case study on music and emotion I discussed earlier
+:::
+
+
+## Irrelevant Transformations
+<div class="top-right">
+  ![](img/part3.png){width="100"}
+</div>
+
+:::{.r-stack}
+![](img/manipulated_1.png){.fragment .absolute left="5%"}
+
+![](img/manipulated_2.png){.fragment .absolute left="5%"}
+
+![](img/manipulated_3.png){.fragment .absolute left="5%"}
+
+![](img/manipulated_4.png){.fragment .absolute left="5%"}
+:::
+
+::: columns
+
+:::{.column .r-stack width="40%"}
+![](img/fig6a.png){.fragment width="100%"}
+
+![](img/fig6b.png){.fragment width="100%"}
+
+![](img/fig7.png){.fragment width="100%"}
+:::
+
+:::{.column width="40%"}
+![](img/fig8.png){.fragment width="100%"}
+:::
+
+:::
+
+
+::: footer
+Swierczek & Schutz (2024), *20th Annual Neuromusic Conference*
+:::
+
+## Stereo Recordings {visibility="hidden"}
+<div class="top-right">
+  ![](img/part3.png){width="100"}
+</div>
+
+## Summary
+
+::: columns
+
+:::{.fragment .fade-in .column width="33%"}
+![](img/part1.svg){width="200"}
+<div style="font-size: 0.5em;">
+- Prediction about music from audio is challenging!
+- Music practice and science can inform prediction
+</div>
+:::
+
+:::{.fragment .fade-in .column width="33%"}
+![](img/part2.png){width="200"}
+<div style="font-size: 0.5em;">
+- Accuracy is not the full story!
+- Music is HUMAN
+- Your point of view matters!
+</div>
+:::
+
+:::{.fragment .fade-in .column width="33%"}
+![](img/part3.png){width="200"}
+<div style="font-size: 0.5em;">
+- Novel approaches solve problems
+- Wherever there is prediction, there is noise—and more of it than you think.
+</div>
+:::
+
+:::
+
+::: footer
+Kahneman et al. (2021) *Noise: A Flaw in Human Judgment*
+:::
+
+::: {.notes}
+Takeaway: Caution, skepticism, awareness, never stop testing.
+:::
+
+## Thank You!
+
+::: columns
+
+:::{.column width="50%"}
+![](img/maple3.jpg){}
+
+![](img/thanks.png){}
+:::
+
+:::{.column width="30%}
+Visit my GitHub
+![](img/github.png)
+:::
+
+:::
+
+
+## Works Cited
+
+
+
+```{=html}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const buzzwords = document.querySelectorAll('#buzzwords .buzzword');
+  buzzwords.forEach((buzzword, index) => {
+    // Set a longer initial delay based on the index
+    const delay = (index + 1) * 1000; // 1 second for the first word, 2 seconds for the second, etc.
+    setTimeout(() => {
+      // Make each buzzword visible
+      buzzword.classList.add('visible');
+    }, delay);
+  });
+});
+</script>
